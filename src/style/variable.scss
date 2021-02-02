@@ -1,0 +1,136 @@
+$red:#f36;
+$orange:#f63;
+$light:rgba(15, 57, 95, 1);
+$deep:rgba(40, 41, 80, 1);
+$screenBg:#071941;
+$blue:#6090c0;//#0093DD;
+$mainf:#333;
+$main:#0178d4;//2dd8b1
+$mainHover:darken($main,15%);
+$deepBlue:#476d94;//#57a3f3;
+$border:#dddee1;
+$divider:#e9eaec;
+$background:#fff;
+$title:#1c2438;
+$content:#495060;
+$headerHeight:59px;
+$lightBg:#f8f8f8;
+
+@mixin inlineBlock {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+@mixin tooMoreWords {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin buttonSize {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    border-radius: $radius;
+}
+
+@mixin collect {
+    margin: 0;
+    font-size: 28px;
+}
+
+@mixin gradualLight {
+    background: rgba(243, 106, 90, 0.4);
+    background: -webkit-linear-gradient(left, rgba(40, 41, 80, 0.4), rgba(15, 57, 95, 0.4));
+    background: -o-linear-gradient(right, rgba(40, 41, 80, 0.4), rgba(15, 57, 95, 0.4));
+    background: -moz-linear-gradient(right, rgba(40, 41, 80, 0.4), rgba(15, 57, 95, 0.4));
+    background: linear-gradient(to right, rgba(40, 41, 80, 0.4), rgba(15, 57, 95, 0.4));
+}
+
+@mixin gradual {
+    background: #24427d;
+    background: -webkit-linear-gradient(143deg,#24427d 20%,#2b83f9 81%,#3a9dff);
+    background: -o-linear-gradient(143deg,#24427d 20%,#2b83f9 81%,#3a9dff);
+    background: -moz-linear-gradient(143deg,#24427d 20%,#2b83f9 81%,#3a9dff);
+    background: linear-gradient(143deg,#24427d 20%,#2b83f9 81%,#3a9dff);
+}
+
+@mixin gradualHard {
+    background: #F25544;
+    background: -webkit-linear-gradient(left, #ee583f, #f36);
+    background: -o-linear-gradient(right, #ee583f, #f36);
+    background: -moz-linear-gradient(right, #ee583f, #f36);
+    background: linear-gradient(to right, #ee583f, #f36);
+}
+
+@mixin insetShadow {
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05) inset;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05) inset;
+}
+
+@mixin shadow {
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+}
+@mixin topShadow {
+    -moz-box-shadow: 0px 12px 46px 9px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow:0px 12px 46px 9px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 12px 46px 9px rgba(0, 0, 0, 0.15);
+}
+.gradual{
+    border:0;
+    @include gradual;
+    &:actived{
+    @include gradual;
+    }
+    &:focus{
+    @include gradual;
+    }
+}
+.gradual:hover{
+    border:0;
+    @include gradual;
+    @include insetShadow;
+}
+.beta {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    height: 16px;
+    line-height: 18px;
+    background: #fff;
+    color: $red;
+    padding: 0 3px;
+    font-weight: 100;
+    font-size: 12px;
+    font-family: 'Hiragino Sans GB';
+    border-radius: 3px;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+    z-index: 999;
+}
+
+
+@mixin flex{
+    display: flex;
+
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-box-pack:center;
+    display: flex;
+}
+

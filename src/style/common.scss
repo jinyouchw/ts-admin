@@ -1,0 +1,64 @@
+ /* 公用样式 */
+ .flex-row-center-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+ .flex-row-center-around {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .flex-column-center {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+  }
+  .flex-row{
+     display: flex;
+     flex-direction: row;
+  }
+  .flex-column{
+     display: flex;
+     flex-direction: column;
+  }
+  .scroll-y::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 2px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  .scroll-y::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #f5f5f5;
+  }
+// 超出部分字体隐藏 单行
+  .ellipsis-s {
+   white-space:nowrap;
+   overflow:hidden;
+   text-overflow:ellipsis;
+  }
+// 超出部分字体隐藏 单行
+  .ellipsis-m {
+   word-break: break-all;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+  }
+ //hover filter效果
+ .filter-h {
+   transition: all 0.8s;
+   filter: saturate(100%);
+ }
+ .filter-h:hover{
+   filter: saturate(180%);
+   cursor: pointer;
+ }
+
+  
